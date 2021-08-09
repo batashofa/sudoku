@@ -29,13 +29,12 @@ module.exports = function solveSudoku(matrix) {
         if (arr.length === 0) {
             return false;
         }
-        for (let l = 0; l < 9; l++) {
-            matrix[i][j] = arr[l]
-            if (ifSolved(initSolved)) return matrix
-            else matrix[i][j] = 0
+        for (let l = 0; l < arr.length; l++) {
+            matrix[i][j] = arr[l];
+            if (ifSolved(initSolved)) return matrix;
+            else matrix[i][j] = 0;
         }
     }
-    return (ifSolved(initSolved))
+    return (ifSolved(initSolved));
 }
-
 
